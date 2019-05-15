@@ -9,12 +9,16 @@ namespace Enduro_Marco_Lucas_TJD09
 {
     class Program
     {
-        private const int largura = 75, altura = 30;
+        private const int largura = 101, altura = 30;
         private const int MF_BYCOMMAND = 0x00000000;
         //public const int SC_CLOSE = 0xF060;
         public const int SC_MINIMIZE = 0xF020;
         public const int SC_MAXIMIZE = 0xF030;
         public const int SC_SIZE = 0xF000;
+
+        public static int Largura { get { return largura; } }
+        public static int Altura { get { return altura; } }
+
 
         [DllImport("user32.dll")]
         public static extern int DeleteMenu(IntPtr hMenu, int nPosition, int wFlags);
@@ -24,6 +28,8 @@ namespace Enduro_Marco_Lucas_TJD09
 
         [DllImport("kernel32.dll", ExactSpelling = true)]
         private static extern IntPtr GetConsoleWindow();
+
+        static Jogo jogo = new Jogo();
 
         static void Main(string[] args)
         {
@@ -42,6 +48,12 @@ namespace Enduro_Marco_Lucas_TJD09
             }
 
             Console.BufferWidth = Console.WindowWidth = largura;
+
+            jogo.CarregaMenu();
+            //while (true)
+            //{
+                
+            //}
         }
     }
 }
