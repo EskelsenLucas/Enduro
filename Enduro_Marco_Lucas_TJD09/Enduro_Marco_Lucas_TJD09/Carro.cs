@@ -33,7 +33,7 @@ namespace Enduro_Marco_Lucas_TJD09
                     break;
             }
             Console.SetCursorPosition((Program.Largura / 2 )+ 1 + posXCarro, 25);
-            Console.Write();
+            //Console.Write();
             
         }
     }
