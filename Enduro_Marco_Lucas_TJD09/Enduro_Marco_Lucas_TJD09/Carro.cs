@@ -1,62 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Enduro_Marco_Lucas_TJD09
 {
-
+    //chara
 
     class Carro
     {
 
+        int frameAtual;
+        int carX, carY;
+        ConsoleColor carColor;
+
+        public Carro(ConsoleColor Color = ConsoleColor.White, int posX = 50, int posY = 25)
+        {
+            carX = posX;
+            carY = posY;
+            carColor = Color;
+        }
+
+        public List<char[,]> carroFrames = new List<char[,]>//Frame 1
+        {
+            new char[,]
+            {
+                {'▄','╦','▄'},
+                {'▄','╬','▄'}
+            },
+            new char[,] //Frame 2
+            {
+                {'▀','╦','▀'},
+                {'▀','╬','▀'}
+            },
+        };
+        int posXCarro;
+
+        ConsoleKeyInfo teclaApertada;
+
+        public void DesenhaCarro()
+        {
+            switch (teclaApertada.Key)
+            {
+                case ConsoleKey.LeftArrow:
+                    posXCarro -= 1;
+                    break;
+            }
+
+            frameAtual = ++frameAtual % carroFrames.Count;
+            var frame = carroFrames[frameAtual];
 
 
-        //ConsoleKeyInfo moverCarro = Console.ReadKey();
-        //int posCarro = Program.Largura / 2;
-        //public void DesenhaCarro(ConsoleColor corCarro)
-        //{
-        //    moverCarro = Console.ReadKey();
-        //    switch (moverCarro.Key)
-        //    {
-        //        case ConsoleKey.LeftArrow:
-        //            posCarro -= 1;
-        //            break;
-        //        case ConsoleKey.RightArrow:
-        //            posCarro += 1;
-        //            break;
-        //    }
-        //    if(posCarro >= 73)
-        //    {
-        //        posCarro = 72;
-        //    }else if(posCarro <= 25)
-        //    {
-        //        posCarro = 26;
-        //    }
-        //    Console.SetCursorPosition(posCarro, Program.Altura - 5);
-        //    Console.ForegroundColor = corCarro;
-        //    Console.Write("O||O");
-        //}
-        //ConsoleKeyInfo teclaApertada; //Input para movimentar
-
-        //public void DesenhaCarro()
-        //{
-        //    //    teclaApertada = Console.ReadKey(); // criar uma thread para receber o input!!!
-        //    //    switch (teclaApertada.Key)
-        //    //    {
-        //    //        case ConsoleKey.LeftArrow:
-        //    //            posXCarro -= 1;
-        //    //            break;
-        //    //        case ConsoleKey.RightArrow:
-        //    //            posXCarro += 1;
-        //    //            break;
-        //    //    }
-        //    //    Console.SetCursorPosition((Program.Largura / 2) + 1 + posXCarro, 25);
-        //    //    CoresDoCarro();
-        //    //    Console.Write(carro2);
-        //    //    Console.ResetColor();
-        //    //}
-        //}
+            for (int y = 0; y < carroFrames[frameAtual].GetLength(1); y++)
+            {
+                for (int x = 0; x < carroFrames[frameAtual].GetLength(0); x++)
+                {
+                    Console.SetCursorPosition(carX + posXCarro + y, carY + x);
+                    Console.ForegroundColor = carColor;
+                    Console.Write(frame[x, y]);
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.White;
+        }
     }
 }
