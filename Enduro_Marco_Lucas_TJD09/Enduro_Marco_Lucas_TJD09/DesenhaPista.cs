@@ -25,7 +25,7 @@ namespace Enduro_Marco_Lucas_TJD09
             {
                 Console.SetCursorPosition((Program.Largura - larguraDaPista) / 2 + i, Program.Altura - i);
                 Console.Write('/');
-                if (i % 2== 0)
+                if (i % 2 == 0)
                 {
                     Console.SetCursorPosition(Program.Largura - meioDaPista, Program.Altura - i);
                     Console.Write('|');

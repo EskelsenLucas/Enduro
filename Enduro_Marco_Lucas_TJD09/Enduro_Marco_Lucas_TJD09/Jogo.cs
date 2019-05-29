@@ -11,7 +11,7 @@ namespace Enduro_Marco_Lucas_TJD09
         Menu menu = new Menu();
         Pista pista = new Pista(Program.Altura, Program.Largura);
         DesenhaPista bordas = new DesenhaPista();
-        Carro carro = new Carro();
+        Carro carro = new Carro(ConsoleColor.Red, 10, 5);
 
         public void CarregaMenu()
         {
@@ -26,14 +26,16 @@ namespace Enduro_Marco_Lucas_TJD09
             if (menu.selecionarOpcao == "1")
             {
                 IniciaJogo();
-            }else if (menu.selecionarOpcao == "2")
+            }
+            else if (menu.selecionarOpcao == "2")
             {
                 Console.WriteLine("                         Digite um tamanho de fonte \n" +
                                   "                             16 | 20 | 24 | 28");
                 menu.selecionarOpcao = Console.ReadLine();
                 Console.Clear();
                 CarregaMenu();
-            }else if (menu.selecionarOpcao == "3")
+            }
+            else if (menu.selecionarOpcao == "3")
             {
                 //Fecha o jogo
             }
