@@ -17,7 +17,6 @@ namespace Enduro_Marco_Lucas_TJD09
             Console.BackgroundColor = ConsoleColor.DarkYellow;
             Console.Write(" Pontos: {0} ",pontuacaoJogador);
             Console.ResetColor();
-            Console.WriteLine("derp");
         }
     }
 }
