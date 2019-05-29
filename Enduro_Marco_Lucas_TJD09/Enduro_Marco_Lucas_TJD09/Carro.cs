@@ -6,7 +6,8 @@ namespace Enduro_Marco_Lucas_TJD09
     class Carro
     {
 
-        int carX, carY, estadoAtual;
+        int carX, carY;
+        int estadoAtual = 0;
         ConsoleColor carColor;
         EstadoCarro[] EstadoAtualDoCarro = new EstadoCarro[3];
 
@@ -15,6 +16,10 @@ namespace Enduro_Marco_Lucas_TJD09
             carX = posX;
             carY = posY;
             carColor = Color;
+            EstadoAtualDoCarro[0] = new EstadoCarroDistante();
+            EstadoAtualDoCarro[1] = new EstadoCarroMedio();
+            EstadoAtualDoCarro[2] = new EstadoCarroProximo();
+
         }
 
 
