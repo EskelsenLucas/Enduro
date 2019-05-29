@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Enduro_Marco_Lucas_TJD09
 {
@@ -11,7 +11,10 @@ namespace Enduro_Marco_Lucas_TJD09
         Menu menu = new Menu();
         Pista pista = new Pista(Program.Altura, Program.Largura);
         DesenhaPista bordas = new DesenhaPista();
+        HUD hud = new HUD();
         Carro carro = new Carro();
+
+        ConsoleColor corEscolhidaCarro = ConsoleColor.White;
 
         public void CarregaMenu()
         {
@@ -22,25 +25,24 @@ namespace Enduro_Marco_Lucas_TJD09
         void OpcoesMenu()
         {
             Console.Clear();
-            Console.WriteLine("\n\n\n\n\n\n\n\n\n\n");//Centraliza menu
-            if (menu.selecionarOpcao == "1")
+            if (menu.SelecionarOpcao == "1")
             {
                 IniciaJogo();
-            }else if (menu.selecionarOpcao == "2")
+            }else if (menu.SelecionarOpcao == "2")
             {
-                Console.WriteLine("                         Digite um tamanho de fonte \n" +
-                                  "                             16 | 20 | 24 | 28");
-                menu.selecionarOpcao = Console.ReadLine();
+                menu.CentralizaStrings("Escolha uma cor para o carro: ", 10, ConsoleColor.DarkCyan);
+                menu.CentralizaStrings("1- Azul | 2- Verde | 3- Vermelho | 4- Magenta | 5- Branco", 11, ConsoleColor.Yellow);
+                menu.SelecionarOpcao = Console.ReadLine();
                 Console.Clear();
                 CarregaMenu();
-            }else if (menu.selecionarOpcao == "3")
+            }else if (menu.SelecionarOpcao == "3")//Fecha o jogo
             {
-                //Fecha o jogo
+                
             }
             else //Se digitar uma opção que é inválida
             {
-                Console.WriteLine("                         Selecione uma opção válida!");
-                Console.ReadLine();
+                menu.CentralizaStrings("Selecione uma opção válida!", 10, ConsoleColor.Red);
+                Thread.Sleep(800);
                 Console.Clear();
                 CarregaMenu();
             }
@@ -51,7 +53,9 @@ namespace Enduro_Marco_Lucas_TJD09
             while (true)
             {
                 bordas.DesenhaBordas(pista.larguraDaPista, pista.comprimentoDaPista, pista.meioDaPista);
-                carro.DesenhaCarro();
+                hud.InterfaceHUD();
+                Thread.Sleep(66);
+                //carro.DesenhaCarro();
             }
         }
     }

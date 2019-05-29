@@ -2,26 +2,40 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Enduro_Marco_Lucas_TJD09
 {
 
     class Menu
     {
-        public string selecionarOpcao;
-        //Jogo jogo = new Jogo();
+        public string SelecionarOpcao;
+        int posAlturaMenu = 1, posLarguraMenu = 1;
+        #region string menu
+        string logoJogoMenu = "\n\n\n                                   ▄▄▄▄ ▄▄▄  ▄ ▄▄▄  ▄  ▄ ▄▄▄▄ ▄▄▄▄\n" +
+                                    "                                   █▄▄  █ █  █ █  █ █  █ █  █ █  █\n" +
+                                    "                                   █    █  █ █ █  █ █  █ █▀▀▄ █  █\n" +
+                                    "                                   ▀▀▀▀ ▀  ▀▀▀ ▀▀▀  ▀▀▀▀ ▀  ▀ ▀▀▀▀\n";
+        #endregion
 
         public void ListaMenu()
         {
-            Console.WriteLine("\n\n\n\n\n\n\n\n\n\n");//Centraliza menu
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("                          Selecione uma opção");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("                              1-  Start \n" +
-                              "                              2- Options \n" +
-                              "                              3-  Exit");
-            selecionarOpcao = Console.ReadLine();
+            Console.WriteLine(logoJogoMenu);
+            CentralizaStrings("Selecione uma opção", 10, ConsoleColor.DarkCyan);
+            CentralizaStrings("1-  Iniciar | 2- Opções | 3-  Sair", 11, ConsoleColor.Yellow);
+            CentralizaStrings("Cor do carro: ", 15, ConsoleColor.White);  
+            SelecionarOpcao = Console.ReadLine();
+        }
+
+        //Função para centralizar strings (não pode passar de 100 char)
+        public void CentralizaStrings(string textoParaCentralizar, int EscolhaUmaAltura, ConsoleColor cor)
+        {
+            posLarguraMenu = (Program.Largura - textoParaCentralizar.Length) / 2;
+            posAlturaMenu = EscolhaUmaAltura; //(Program.Altura / 2) - 5;
+            Console.ForegroundColor = cor;
+            Console.SetCursorPosition(posLarguraMenu, posAlturaMenu);
+            Console.WriteLine(textoParaCentralizar);
         }
     }
 }
