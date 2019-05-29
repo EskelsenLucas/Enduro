@@ -46,7 +46,9 @@
     <Compile Include="Carro.cs" />
     <Compile Include="DesenhaPista.cs" />
     <Compile Include="EstadoCarro.cs" />
-    <Compile Include="EstadoCarroAndando.cs" />
+    <Compile Include="EstadoCarroDistante.cs" />
+    <Compile Include="EstadoCarroMedio.cs" />
+    <Compile Include="EstadoCarroProximo.cs" />
     <Compile Include="HUD.cs" />
     <Compile Include="Jogo.cs" />
     <Compile Include="Menu.cs" />

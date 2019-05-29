@@ -2,24 +2,19 @@
 
 namespace Enduro_Marco_Lucas_TJD09
 {
-    public class EstadoCarroAndando : EstadoCarro
+    class EstadoCarroDistante : EstadoCarro
     {
-
-        int frameAtual = 0;
-
-        public EstadoCarroAndando()
+        public EstadoCarroDistante()
         {
             carroFrames = new List<char[,]>//Frame 1
         {
             new char[,]
             {
-                {'▄','╦','▄'},
-                {'▄','╬','▄'}
+                {'▄'}
             },
             new char[,] //Frame 2
             {
-                {'▀','╦','▀'},
-                {'▀','╬','▀'}
+                {'▀'}
             },
         };
         }
@@ -30,4 +25,6 @@ namespace Enduro_Marco_Lucas_TJD09
             return carroFrames[frameAtual];
         }
     }
+
 }
+
