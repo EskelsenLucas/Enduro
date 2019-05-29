@@ -53,9 +53,9 @@ namespace Enduro_Marco_Lucas_TJD09
             while (true)
             {
                 bordas.DesenhaBordas(pista.larguraDaPista, pista.comprimentoDaPista, pista.meioDaPista);
+                carro.DesenhaCarro();
                 hud.InterfaceHUD();
                 Thread.Sleep(66);
-                //carro.DesenhaCarro();
             }
         }
     }
