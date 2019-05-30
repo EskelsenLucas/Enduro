@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 
 namespace Enduro_Marco_Lucas_TJD09
@@ -7,11 +8,11 @@ namespace Enduro_Marco_Lucas_TJD09
     {
 
         int carX, carY;
-        int estadoAtual = 0;
+        int estadoAtual = 2;
         ConsoleColor carColor;
         EstadoCarro[] EstadoAtualDoCarro = new EstadoCarro[3];
 
-        public Carro(ConsoleColor Color = ConsoleColor.White, int posX = 50, int posY = 25)
+        public Carro(ConsoleColor Color, int posX = 50, int posY = 25)
         {
             carX = posX;
             carY = posY;
@@ -25,15 +26,17 @@ namespace Enduro_Marco_Lucas_TJD09
 
         int posXCarro;
 
-        ConsoleKeyInfo teclaApertada;
 
         public void DesenhaCarro()
         {
+            ConsoleKeyInfo teclaApertada = Console.ReadKey();
             switch (teclaApertada.Key)
             {
                 case ConsoleKey.LeftArrow:
-
                     posXCarro -= 1;
+                    break;
+                case ConsoleKey.RightArrow:
+                    posXCarro += 1;
                     break;
             }
 

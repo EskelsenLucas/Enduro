@@ -19,3 +19,10 @@ C:\Users\marcoa\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_
 C:\Users\marcoa\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.csproj.CoreCompileInputs.cache
 C:\Users\marcoa\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.exe
 C:\Users\marcoa\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.pdb
+C:\Users\HP\source\repos\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\bin\Debug\Enduro_Marco_Lucas_TJD09.exe.config
+C:\Users\HP\source\repos\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\bin\Debug\Enduro_Marco_Lucas_TJD09.exe
+C:\Users\HP\source\repos\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\bin\Debug\Enduro_Marco_Lucas_TJD09.pdb
+C:\Users\HP\source\repos\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.exe
+C:\Users\HP\source\repos\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.pdb

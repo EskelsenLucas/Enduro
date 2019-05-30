@@ -18,13 +18,13 @@ namespace Enduro_Marco_Lucas_TJD09
                                     "                                   ▀▀▀▀ ▀  ▀▀▀ ▀▀▀  ▀▀▀▀ ▀  ▀ ▀▀▀▀\n";
         #endregion
 
-        public void ListaMenu()
+        public void ListaMenu(ConsoleColor corEscolhida)
         {
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(logoJogoMenu);
             CentralizaStrings("Selecione uma opção", 10, ConsoleColor.DarkCyan);
             CentralizaStrings("1-  Iniciar | 2- Opções | 3-  Sair", 11, ConsoleColor.Yellow);
-            CentralizaStrings("Cor do carro: ", 15, ConsoleColor.White);  
+            CentralizaStrings("Cor do carro", 15, corEscolhida);  
             SelecionarOpcao = Console.ReadLine();
         }
 
