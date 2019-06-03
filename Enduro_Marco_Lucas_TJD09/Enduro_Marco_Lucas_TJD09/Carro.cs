@@ -24,7 +24,7 @@ namespace Enduro_Marco_Lucas_TJD09
         }
 
 
-        int posXCarro;
+        int posXCarro, posYCarro;
 
 
         public void DesenhaCarro()
@@ -38,19 +38,45 @@ namespace Enduro_Marco_Lucas_TJD09
                 case ConsoleKey.RightArrow:
                     posXCarro += 1;
                     break;
+                case ConsoleKey.UpArrow:
+                    posYCarro -= 1;
+                    break;
+                case ConsoleKey.DownArrow:
+                    posYCarro += 1;
+                    break;
             }
 
-            for (int y = 0; y < EstadoAtualDoCarro[estadoAtual].FrameDoCarro().GetLength(1); y++)
+
+            for (int y = 0; y < EstadoAtualDoCarro[StateChanger()].FrameDoCarro().GetLength(1); y++)
             {
-                for (int x = 0; x < EstadoAtualDoCarro[estadoAtual].FrameDoCarro().GetLength(0); x++)
+                for (int x = 0; x < EstadoAtualDoCarro[StateChanger()].FrameDoCarro().GetLength(0); x++)
                 {
-                    Console.SetCursorPosition(carX + posXCarro + y, carY + x);
+                    Console.SetCursorPosition(carX + posXCarro + y, carY + posYCarro + x);
                     Console.ForegroundColor = carColor;
-                    Console.Write(EstadoAtualDoCarro[estadoAtual].FrameDoCarro()[x, y]);
+                    Console.Write(EstadoAtualDoCarro[StateChanger()].FrameDoCarro()[x, y]);
                     //Console.Write(frame[x, y]);
                 }
             }
             Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        private int StateChanger()
+        {
+            int intervaloDeDistancia = Program.Altura / 3;
+
+            if (carY + posYCarro > intervaloDeDistancia)
+            {
+                if (carY + posYCarro > intervaloDeDistancia * 2)
+                {
+                    return 2;
+                    
+                }
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
