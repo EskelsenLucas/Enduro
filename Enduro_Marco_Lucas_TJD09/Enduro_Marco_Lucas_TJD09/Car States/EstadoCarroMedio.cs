@@ -4,8 +4,6 @@ namespace Enduro_Marco_Lucas_TJD09
 {
     public class EstadoCarroMedio : EstadoCarro
     {
-        int frameAtual = 0;
-
         public EstadoCarroMedio()
         {
             carroFrames = new List<char[,]>//Frame 1

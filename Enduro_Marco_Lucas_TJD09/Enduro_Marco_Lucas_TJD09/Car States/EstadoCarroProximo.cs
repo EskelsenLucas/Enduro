@@ -8,7 +8,7 @@ namespace Enduro_Marco_Lucas_TJD09
         public EstadoCarroProximo()
         {
             carroFrames = new List<char[,]>//Frame 1
-        {
+            {
             new char[,]
             {
                 {'▄','╦','▄'},

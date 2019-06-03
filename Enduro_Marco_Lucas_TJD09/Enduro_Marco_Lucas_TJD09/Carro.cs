@@ -10,7 +10,7 @@ namespace Enduro_Marco_Lucas_TJD09
         int carX, carY;
         int estadoAtual = 2;
         ConsoleColor carColor;
-        EstadoCarro[] EstadoAtualDoCarro = new EstadoCarro[3];
+        EstadoCarro[] EstadoAtualDoCarro = new EstadoCarro[4];
 
         public Carro(ConsoleColor Color, int posX = 50, int posY = 25)
         {
@@ -20,6 +20,8 @@ namespace Enduro_Marco_Lucas_TJD09
             EstadoAtualDoCarro[0] = new EstadoCarroDistante();
             EstadoAtualDoCarro[1] = new EstadoCarroMedio();
             EstadoAtualDoCarro[2] = new EstadoCarroProximo();
+            EstadoAtualDoCarro[3] = new EstadoCarroExplodindo();
+
 
         }
 
@@ -69,14 +71,12 @@ namespace Enduro_Marco_Lucas_TJD09
                 if (carY + posYCarro > intervaloDeDistancia * 2)
                 {
                     return 2;
-                    
+                    //return 4;
+
                 }
                 return 1;
             }
-            else
-            {
-                return 0;
-            }
+            return 0;
         }
     }
 }
