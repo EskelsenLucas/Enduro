@@ -71,8 +71,6 @@ namespace Enduro_Marco_Lucas_TJD09
                 if (carY + posYCarro > intervaloDeDistancia * 2)
                 {
                     return 2;
-                    //return 4;
-
                 }
                 return 1;
             }
