@@ -12,9 +12,8 @@ namespace Enduro_Marco_Lucas_TJD09
         Pista pista = new Pista(Program.Altura, Program.Largura);
         DesenhaPista bordas = new DesenhaPista();
         HUD hud = new HUD();
-        //Carro carro = new Carro();
-
         ConsoleColor corEscolhidaCarro = ConsoleColor.White;
+        Player jogador;
 
         public void CarregaMenu()
         {
@@ -68,11 +67,12 @@ namespace Enduro_Marco_Lucas_TJD09
 
         public void IniciaJogo()
         {
-            Carro carro = new Carro(corEscolhidaCarro);
+            //Carro carro = new Carro(corEscolhidaCarro);
+            jogador = new Player(corEscolhidaCarro);
             while (true)
             {
                 bordas.DesenhaBordas(pista.larguraDaPista, pista.comprimentoDaPista, pista.meioDaPista);
-                carro.DesenhaCarro();
+                jogador.DesenhaJogador();
                 hud.InterfaceHUD();
                 Thread.Sleep(66);
             }
