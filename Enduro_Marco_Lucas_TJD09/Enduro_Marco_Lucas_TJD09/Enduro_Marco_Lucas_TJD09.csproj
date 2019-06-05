@@ -52,6 +52,7 @@
     <Compile Include="Car States\EstadoCarroProximo.cs" />
     <Compile Include="HUD.cs" />
     <Compile Include="Jogo.cs" />
+    <Compile Include="Keyboard.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Pista.cs" />
     <Compile Include="Player.cs" />
