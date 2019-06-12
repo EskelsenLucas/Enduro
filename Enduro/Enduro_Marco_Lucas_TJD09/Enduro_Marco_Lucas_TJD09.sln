@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enduro_Marco_Lucas_TJD09", "Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09.csproj", "{3AACA102-973E-4698-8799-C929F6B3454E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AACA102-973E-4698-8799-C929F6B3454E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AACA102-973E-4698-8799-C929F6B3454E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AACA102-973E-4698-8799-C929F6B3454E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AACA102-973E-4698-8799-C929F6B3454E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22E27E64-3782-49CC-804F-FA206249D6FE}
+	EndGlobalSection
+EndGlobal
