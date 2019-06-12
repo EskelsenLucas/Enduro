@@ -14,12 +14,12 @@ namespace Enduro_Marco_Lucas_TJD09
         {
             this.corDoCarro = corDoCarro;
             carroDoPlayer = new Carro(corDoCarro);
-            inputReader = new Thread(new ThreadStart(inputtroll));
+            inputReader = new Thread(new ThreadStart(InputThreadMethod));
             inputReader.Start();
         }
               
 
-        void inputtroll()
+        void InputThreadMethod()
         {
             while (true)
             {

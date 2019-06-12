@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 
 
 namespace Enduro_Marco_Lucas_TJD09
@@ -26,24 +25,6 @@ namespace Enduro_Marco_Lucas_TJD09
 
         public void DesenhaCarro()
         {
-            //ConsoleKeyInfo teclaApertada = Console.ReadKey();
-            //switch (teclaApertada.Key)
-            //{
-            //    case ConsoleKey.LeftArrow:
-            //        carX -= 1;
-            //        break;
-            //    case ConsoleKey.RightArrow:
-            //        carX += 1;
-            //        break;
-            //    case ConsoleKey.UpArrow:
-            //        carY -= 1;
-            //        break;
-            //    case ConsoleKey.DownArrow:
-            //        carY += 1;
-            //        break;
-            //}
-
-
             for (int y = 0; y < EstadoAtualDoCarro[StateChanger()].FrameDoCarro().GetLength(1); y++)
             {
                 for (int x = 0; x < EstadoAtualDoCarro[StateChanger()].FrameDoCarro().GetLength(0); x++)

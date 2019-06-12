@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace Enduro_Marco_Lucas_TJD09
@@ -13,7 +10,16 @@ namespace Enduro_Marco_Lucas_TJD09
         DesenhaPista bordas = new DesenhaPista();
         HUD hud = new HUD();
         ConsoleColor corEscolhidaCarro = ConsoleColor.White;
+        private string[] buffer = new string[Program.Altura];
         Player jogador;
+        Enemy inimigo;
+
+        public string[] Buffer
+        {
+            get { return buffer; }
+            set { buffer = value; }
+        }
+
 
         public void CarregaMenu()
         {
@@ -27,12 +33,13 @@ namespace Enduro_Marco_Lucas_TJD09
             if (menu.SelecionarOpcao == "1")
             {
                 IniciaJogo();
-            }else if (menu.SelecionarOpcao == "2")
+            }
+            else if (menu.SelecionarOpcao == "2")
             {
                 menu.CentralizaStrings("Escolha uma cor para o carro: ", 10, ConsoleColor.DarkCyan);
                 menu.CentralizaStrings("1- Azul | 2- Verde | 3- Vermelho | 4- Magenta | 5- Branco", 11, ConsoleColor.Yellow);
                 menu.SelecionarOpcao = Console.ReadLine();
-                switch(menu.SelecionarOpcao)
+                switch (menu.SelecionarOpcao)
                 {
                     case "1":
                         corEscolhidaCarro = ConsoleColor.Blue;
@@ -52,9 +59,10 @@ namespace Enduro_Marco_Lucas_TJD09
                 }
                 Console.Clear();
                 CarregaMenu();
-            }else if (menu.SelecionarOpcao == "3")//Fecha o jogo
+            }
+            else if (menu.SelecionarOpcao == "3")//Fecha o jogo
             {
-                
+
             }
             else //Se digitar uma opção que é inválida
             {
@@ -69,12 +77,29 @@ namespace Enduro_Marco_Lucas_TJD09
         {
             //Carro carro = new Carro(corEscolhidaCarro);
             jogador = new Player(corEscolhidaCarro);
+            inimigo = new Enemy();
             while (true)
             {
-                bordas.DesenhaBordas(pista.larguraDaPista, pista.comprimentoDaPista, pista.meioDaPista);
-                jogador.DesenhaJogador();
+                Console.Clear();
+                LimpaBuffer();
+                Buffer = bordas.DesenhaBordas(pista.larguraDaPista, pista.comprimentoDaPista, pista.meioDaPista);
+                for (int y = 0; y < buffer.Length; y++)
+                {
+                    Console.WriteLine(buffer[y]);
+                }
                 hud.InterfaceHUD();
+                inimigo.DesenhaInimigo();
+                jogador.DesenhaJogador();
+                Console.SetCursorPosition(0, Program.Altura-1);
                 Thread.Sleep(66);
+            }
+        }
+
+        private void LimpaBuffer()
+        {
+            for (int i = 0; i < buffer.Length; i++)
+            {
+                buffer[i] = string.Empty;
             }
         }
     }
