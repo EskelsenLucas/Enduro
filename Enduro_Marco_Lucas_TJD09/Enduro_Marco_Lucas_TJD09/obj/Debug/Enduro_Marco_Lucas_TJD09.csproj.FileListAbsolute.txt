@@ -32,4 +32,4 @@ C:\Users\marco\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_T
 C:\Users\marco\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.exe
 C:\Users\marco\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.pdb
 C:\Users\marcoa\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.csprojAssemblyReference.cache
-C:\Users\marco\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.csprojAssemblyReference.cache
+C:\Users\marco\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.csprojResolveAssemblyReference.cache

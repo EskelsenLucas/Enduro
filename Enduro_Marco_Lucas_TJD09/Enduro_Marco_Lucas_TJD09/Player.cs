@@ -6,6 +6,8 @@ namespace Enduro_Marco_Lucas_TJD09
     class Player
     {
         Carro carroDoPlayer;
+        public int PosX { get; private set; }
+        public int PosY { get; private set; }
         ConsoleColor corDoCarro;
         Thread inputReader;
 
@@ -13,11 +15,13 @@ namespace Enduro_Marco_Lucas_TJD09
         public Player(ConsoleColor corDoCarro)
         {
             this.corDoCarro = corDoCarro;
+            PosX = 50;
+            PosY = 25;
             carroDoPlayer = new Carro(corDoCarro);
             inputReader = new Thread(new ThreadStart(InputThreadMethod));
             inputReader.Start();
         }
-              
+
 
         void InputThreadMethod()
         {
@@ -29,24 +33,33 @@ namespace Enduro_Marco_Lucas_TJD09
 
         public void LeInputDoJogador()
         {
-          
-
-            
             ConsoleKeyInfo teclaApertada = Console.ReadKey();
 
             switch (teclaApertada.Key)
             {
                 case ConsoleKey.LeftArrow:
-                    carroDoPlayer.MoveCarro(-1, 0);
+                    if (PosX > (Program.Largura - Pista.Instance.larguraDaPista) / 2 + (Pista.Instance.comprimentoDaPista - PosY) - 4)
+                    {
+                        PosX--;
+                    }
                     break;
                 case ConsoleKey.A:
-                    carroDoPlayer.MoveCarro(-1, 0);
+                    if (PosX > (Program.Largura - Pista.Instance.larguraDaPista) / 2 + (Pista.Instance.comprimentoDaPista - PosY) - 4)
+                    {
+                        PosX--;
+                    }
                     break;
                 case ConsoleKey.RightArrow:
-                    carroDoPlayer.MoveCarro(1, 0);
+                    if (PosX < Program.Largura - (Program.Largura - Pista.Instance.larguraDaPista) + PosY - 6)
+                    {
+                        PosX++;
+                    }
                     break;
                 case ConsoleKey.D:
-                    carroDoPlayer.MoveCarro(1, 0);
+                    if (PosX < Program.Largura - (Program.Largura - Pista.Instance.larguraDaPista) + PosY - 6)
+                    {
+                        PosX++;
+                    }
                     break;
                 //case ConsoleKey.UpArrow:
                 //    y = -6;
@@ -60,7 +73,7 @@ namespace Enduro_Marco_Lucas_TJD09
                 //case ConsoleKey.S:
                 //    y = 6;
                 //    break;
-                default:                   
+                default:
                     break;
             }
             while (Console.KeyAvailable)
@@ -69,9 +82,13 @@ namespace Enduro_Marco_Lucas_TJD09
 
         public void DesenhaJogador()
         {
+            carroDoPlayer.MoveCarro(PosX, PosY);
             carroDoPlayer.DesenhaCarro();
         }
 
-
+        public Tuple<int, int> RelayPosition()
+        {
+            return Tuple.Create(PosX, PosY);
+        }
     }
 }

@@ -25,27 +25,34 @@ namespace Enduro_Marco_Lucas_TJD09
 
         public void DesenhaCarro()
         {
-            for (int y = 0; y < EstadoAtualDoCarro[StateChanger()].FrameDoCarro().GetLength(1); y++)
+            if (carY < Program.Altura - 1)
             {
-                for (int x = 0; x < EstadoAtualDoCarro[StateChanger()].FrameDoCarro().GetLength(0); x++)
+                for (int y = 0; y < EstadoAtualDoCarro[StateChanger()].FrameDoCarro().GetLength(1); y++)
                 {
-                    Console.SetCursorPosition(carX + y, carY + x);
-                    Console.ForegroundColor = carColor;
-                    Console.Write(EstadoAtualDoCarro[StateChanger()].FrameDoCarro()[x, y]);
-                    //Console.Write(frame[x, y]);
+                    for (int x = 0; x < EstadoAtualDoCarro[StateChanger()].FrameDoCarro().GetLength(0); x++)
+                    {
+                        Console.SetCursorPosition(carX + y, carY + x);
+                        Console.ForegroundColor = carColor;
+                        Console.Write(EstadoAtualDoCarro[StateChanger()].FrameDoCarro()[x, y]);
+                        //Console.Write(frame[x, y]);
+                    }
                 }
             }
             Console.ForegroundColor = ConsoleColor.White;
         }
 
-        public void MoveCarro(int direcaoX = 0, int direcaoY = 0)
+        public void MoveCarro(int posX = 0, int posY = 0)
         {
-            carX += direcaoX;
-            carY += direcaoY;
+            carX = posX;
+            carY = posY;
         }
 
-        private int StateChanger()
+        private int StateChanger(int desiredState = -1)
         {
+            if (desiredState != -1)
+            {
+                return desiredState;
+            }
             int intervaloDeDistancia = Program.Altura / 3;
 
             if (carY > intervaloDeDistancia)
@@ -57,6 +64,11 @@ namespace Enduro_Marco_Lucas_TJD09
                 return 1;
             }
             return 0;
+        }
+
+        public void CarExplosion()
+        {
+            StateChanger(3);
         }
     }
 }

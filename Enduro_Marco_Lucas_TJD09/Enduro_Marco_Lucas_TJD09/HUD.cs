@@ -8,7 +8,7 @@ namespace Enduro_Marco_Lucas_TJD09
 {
     class HUD
     {
-        int pontuacaoJogador;
+        public int pontuacaoJogador;
 
         public void InterfaceHUD()
         {

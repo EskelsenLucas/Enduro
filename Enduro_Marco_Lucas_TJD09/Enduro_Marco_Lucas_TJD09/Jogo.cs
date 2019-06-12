@@ -6,7 +6,7 @@ namespace Enduro_Marco_Lucas_TJD09
     class Jogo
     {
         Menu menu = new Menu();
-        Pista pista = new Pista(Program.Altura, Program.Largura);
+        public Pista pista = Pista.Instance;
         DesenhaPista bordas = new DesenhaPista();
         HUD hud = new HUD();
         ConsoleColor corEscolhidaCarro = ConsoleColor.White;
@@ -92,6 +92,17 @@ namespace Enduro_Marco_Lucas_TJD09
                 jogador.DesenhaJogador();
                 Console.SetCursorPosition(0, Program.Altura-1);
                 Thread.Sleep(66);
+            }
+        }
+
+        private void CollisionCheck(Tuple<int,int> playerCoord, Tuple<int, int> enemyCoord)
+        {
+            if (playerCoord.Item2+2 <= enemyCoord.Item2 || playerCoord.Item2 >= enemyCoord.Item2+2)
+            {
+                if (playerCoord.Item1)
+                {
+
+                }
             }
         }
 
