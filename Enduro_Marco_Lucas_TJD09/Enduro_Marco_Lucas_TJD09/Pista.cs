@@ -6,14 +6,23 @@ using System.Threading;
 
 namespace Enduro_Marco_Lucas_TJD09
 {
-    class Pista
+    public sealed class Pista
     {
+        private static readonly Pista instance = new Pista();
         public int comprimentoDaPista, larguraDaPista, meioDaPista;
-        public Pista(int alturaDaTela, int larguraDaTela)
+        public Pista()
         {
-            comprimentoDaPista = alturaDaTela;
+            comprimentoDaPista = Program.Altura;
             larguraDaPista = 60;
-            meioDaPista = larguraDaTela / 2;
+            meioDaPista = Program.Largura / 2;
+        }
+
+        public static Pista Instance
+        {
+            get
+            {
+                return instance;
+            }
         }
     }
 }

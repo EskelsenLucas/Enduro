@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Enduro_Marco_Lucas_TJD09
 {
     class HUD
     {
-        int pontuacaoJogador;
+        public int pontuacaoJogador;
 
         public void InterfaceHUD()
         {

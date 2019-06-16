@@ -43,16 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Car States\EstadoCarroExplodindo.cs" />
     <Compile Include="Carro.cs" />
     <Compile Include="DesenhaPista.cs" />
-    <Compile Include="EstadoCarro.cs" />
-    <Compile Include="EstadoCarroDistante.cs" />
-    <Compile Include="EstadoCarroMedio.cs" />
-    <Compile Include="EstadoCarroProximo.cs" />
+    <Compile Include="Car States\EstadoCarro.cs" />
+    <Compile Include="Car States\EstadoCarroDistante.cs" />
+    <Compile Include="Car States\EstadoCarroMedio.cs" />
+    <Compile Include="Car States\EstadoCarroProximo.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="Gasolina.cs" />
     <Compile Include="HUD.cs" />
     <Compile Include="Jogo.cs" />
+    <Compile Include="Keyboard.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Pista.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
