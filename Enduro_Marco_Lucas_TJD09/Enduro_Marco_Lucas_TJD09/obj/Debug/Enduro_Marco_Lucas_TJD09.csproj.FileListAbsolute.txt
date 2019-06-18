@@ -31,7 +31,6 @@ C:\Users\marco\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_T
 C:\Users\marco\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.csproj.CoreCompileInputs.cache
 C:\Users\marco\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.exe
 C:\Users\marco\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.pdb
-C:\Users\marco\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.csprojResolveAssemblyReference.cache
 C:\Users\lucasgv\Desktop\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\bin\Debug\Enduro_Marco_Lucas_TJD09.exe.config
 C:\Users\lucasgv\Desktop\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\bin\Debug\Enduro_Marco_Lucas_TJD09.exe
 C:\Users\lucasgv\Desktop\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\bin\Debug\Enduro_Marco_Lucas_TJD09.pdb
@@ -53,3 +52,4 @@ C:\Users\lucasgv\Desktop\Enduro-Lucas\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Luca
 C:\Users\lucasgv\Desktop\Enduro-Lucas\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.csproj.CoreCompileInputs.cache
 C:\Users\lucasgv\Desktop\Enduro-Lucas\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.exe
 C:\Users\lucasgv\Desktop\Enduro-Lucas\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.pdb
+C:\Users\marco\Source\Repos\Enduro\Enduro_Marco_Lucas_TJD09\Enduro_Marco_Lucas_TJD09\obj\Debug\Enduro_Marco_Lucas_TJD09.csprojAssemblyReference.cache

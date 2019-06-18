@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 
 namespace Enduro_Marco_Lucas_TJD09
@@ -9,7 +10,7 @@ namespace Enduro_Marco_Lucas_TJD09
         public int PosX { get; private set; }
         public int PosY { get; private set; }
         ConsoleColor corDoCarro;
-        Thread inputReader;
+        public Thread inputReader;
 
 
         public Player(ConsoleColor corDoCarro)

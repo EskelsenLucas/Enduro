@@ -114,9 +114,9 @@ namespace Enduro_Marco_Lucas_TJD09
                 hud.InterfaceHUD();
                 gasolina.DesenhaGasolina();
                 contadorGasolina++;
-                if(contadorGasolina >= 25)
+                if (contadorGasolina >= 25)
                 {
-                    gasolina.TanqueGasolina-= 2;
+                    gasolina.TanqueGasolina -= 2;
                     contadorGasolina = 0;
                 }
                 inimigo.DesenhaInimigo();
@@ -133,8 +133,9 @@ namespace Enduro_Marco_Lucas_TJD09
         {
             if (gasolina.TanqueGasolina <= 0)
             {
-                menu.CentralizaStrings("Fim de Jogo", Program.Altura/2, ConsoleColor.Red);
+                menu.CentralizaStrings("Fim de Jogo", Program.Altura / 2, ConsoleColor.Red);
                 Thread.Sleep(1000);
+                jogador.inputReader.Abort();
                 CarregaMenu();
             }
         }
