@@ -15,6 +15,10 @@ namespace Enduro_Marco_Lucas_TJD09
         Player jogador;
         Enemy inimigo;
 
+        bool estaJogando = false;
+
+        int contadorGasolina = 0;
+
         public string[] Buffer
         {
             get { return buffer; }
@@ -24,7 +28,9 @@ namespace Enduro_Marco_Lucas_TJD09
 
         public void CarregaMenu()
         {
+            estaJogando = false;
             Console.Clear();
+            menu.SelecionarOpcao = "0";
             menu.ListaMenu(corEscolhidaCarro);
             OpcoesMenu();
         }
@@ -34,6 +40,7 @@ namespace Enduro_Marco_Lucas_TJD09
             Console.Clear();
             if (menu.SelecionarOpcao == "1")
             {
+                estaJogando = true;
                 IniciaJogo();
             }
             else if (menu.SelecionarOpcao == "2")
@@ -73,6 +80,14 @@ namespace Enduro_Marco_Lucas_TJD09
                 Console.ReadLine();
                 CarregaMenu();
             }
+            else if (menu.SelecionarOpcao == "5")
+            {
+                Console.Clear();
+                menu.CentralizaStrings("Pontuação mais alta: ", 12, ConsoleColor.Yellow);
+                menu.CentralizaStrings(hud.pontuacaoJogador.ToString(), 13, ConsoleColor.White);
+                Console.ReadLine();
+                CarregaMenu();
+            }
             else //Se digitar uma opção que é inválida
             {
                 menu.CentralizaStrings("Selecione uma opção válida!", 10, ConsoleColor.Red);
@@ -87,7 +102,7 @@ namespace Enduro_Marco_Lucas_TJD09
             //Carro carro = new Carro(corEscolhidaCarro);
             jogador = new Player(corEscolhidaCarro);
             inimigo = new Enemy();
-            while (true)
+            while (estaJogando)
             {
                 Console.Clear();
                 LimpaBuffer();
@@ -98,6 +113,12 @@ namespace Enduro_Marco_Lucas_TJD09
                 }
                 hud.InterfaceHUD();
                 gasolina.DesenhaGasolina();
+                contadorGasolina++;
+                if(contadorGasolina >= 25)
+                {
+                    gasolina.TanqueGasolina-= 2;
+                    contadorGasolina = 0;
+                }
                 inimigo.DesenhaInimigo();
                 jogador.DesenhaJogador();
                 CollisionCheck(jogador.RelayPosition(), inimigo.RelayPosition());
@@ -112,7 +133,9 @@ namespace Enduro_Marco_Lucas_TJD09
         {
             if (gasolina.TanqueGasolina <= 0)
             {
-                menu.CentralizaStrings("Fim de Jogo", Program.Altura, ConsoleColor.Red);
+                menu.CentralizaStrings("Fim de Jogo", Program.Altura/2, ConsoleColor.Red);
+                Thread.Sleep(1000);
+                CarregaMenu();
             }
         }
 

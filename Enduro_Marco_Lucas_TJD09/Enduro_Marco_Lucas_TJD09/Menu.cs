@@ -12,10 +12,10 @@ namespace Enduro_Marco_Lucas_TJD09
         public string SelecionarOpcao;
         int posAlturaMenu = 0, posLarguraMenu = 0;
         #region string menu
-        string logoJogoMenu = "\n\n\n                           ▄▄▄▄ ▄▄▄▄ ▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄ ▄▄▄  ▄  ▄ ▄▄▄▄ ▄▄▄▄\n" +
-                                    "                           █    █  █ █  █ █ █ █ █ █  █ █  █ █  █ █  █ █  █\n" +
-                                    "                           █    █▀▀█ █▀▀▄ █  █  █ █▀▀█ █  █ █  █ █▀▀▄ █  █\n" +
-                                    "                           ▀▀▀▀ ▀  ▀ ▀  ▀ ▀     ▀ ▀  ▀ ▀▀▀  ▀▀▀▀ ▀  ▀ ▀▀▀▀\n";
+        string logoJogoMenu = "\n\n\n                                    ▄▄▄▄ ▄▄▄ ▄ ▄▄▄  ▄  ▄ ▄▄▄▄ ▄▄▄▄\n" +
+                                    "                                    █▄▄  █ █ █ █  █ █  █ █  █ █  █\n" +
+                                    "                                    █    █ █ █ █  █ █  █ █▀▀▄ █  █\n" +
+                                    "                                    ▀▀▀▀ ▀ ▀▀▀ ▀▀▀  ▀▀▀▀ ▀  ▀ ▀▀▀▀\n";
         #endregion
 
         public void ListaMenu(ConsoleColor corEscolhida)
@@ -24,7 +24,7 @@ namespace Enduro_Marco_Lucas_TJD09
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(logoJogoMenu);
             CentralizaStrings("Selecione uma opção", 10, ConsoleColor.DarkCyan);
-            CentralizaStrings("1-  Iniciar | 2- Opções | 3-  Sair | 4- Créditos", 11, ConsoleColor.Yellow);
+            CentralizaStrings("1-  Iniciar | 2- Opções | 3-  Sair | 4- Créditos | 5- HighScore", 11, ConsoleColor.Yellow);
             CentralizaStrings("Cor do carro", 15, corEscolhida);  
             SelecionarOpcao = Console.ReadLine();
         }

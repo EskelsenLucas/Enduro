@@ -10,13 +10,13 @@ namespace Enduro_Marco_Lucas_TJD09
         {
             new char[,]
             {
-                {'▄','▀'},
-                {'▄','▀'}
+                {'m','m'},
+                {'w','w'}
             },
             new char[,] //Frame 2
             {
-                {'▀','▄'},
-                {'▀','▄'}
+                {'w','w'},
+                {'m','m'}
             },
         };
         }
