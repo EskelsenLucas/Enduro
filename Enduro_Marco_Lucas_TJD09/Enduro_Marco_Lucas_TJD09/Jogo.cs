@@ -18,6 +18,7 @@ namespace Enduro_Marco_Lucas_TJD09
         bool estaJogando = false;
 
         int contadorGasolina = 0;
+        int highscore;
 
         public string[] Buffer
         {
@@ -82,9 +83,13 @@ namespace Enduro_Marco_Lucas_TJD09
             }
             else if (menu.SelecionarOpcao == "5")
             {
+                if(hud.pontuacaoJogador > highscore)
+                {
+                    highscore = hud.pontuacaoJogador;
+                }
                 Console.Clear();
                 menu.CentralizaStrings("Pontuação mais alta: ", 12, ConsoleColor.Yellow);
-                menu.CentralizaStrings(hud.pontuacaoJogador.ToString(), 13, ConsoleColor.White);
+                menu.CentralizaStrings(highscore.ToString(), 13, ConsoleColor.White);
                 Console.ReadLine();
                 CarregaMenu();
             }
@@ -102,6 +107,8 @@ namespace Enduro_Marco_Lucas_TJD09
             //Carro carro = new Carro(corEscolhidaCarro);
             jogador = new Player(corEscolhidaCarro);
             inimigo = new Enemy();
+            gasolina.TanqueGasolina = gasolina.GasolinaInicial;
+            hud.pontuacaoJogador = 0;
             while (estaJogando)
             {
                 Console.Clear();
@@ -112,13 +119,13 @@ namespace Enduro_Marco_Lucas_TJD09
                     Console.WriteLine(buffer[y]);
                 }
                 hud.InterfaceHUD();
-                gasolina.DesenhaGasolina();
                 contadorGasolina++;
-                if (contadorGasolina >= 25)
+                if (contadorGasolina >= 20)
                 {
-                    gasolina.TanqueGasolina -= 2;
+                    gasolina.TanqueGasolina--;
                     contadorGasolina = 0;
                 }
+                gasolina.DesenhaGasolina();
                 inimigo.DesenhaInimigo();
                 jogador.DesenhaJogador();
                 CollisionCheck(jogador.RelayPosition(), inimigo.RelayPosition());
@@ -134,7 +141,7 @@ namespace Enduro_Marco_Lucas_TJD09
             if (gasolina.TanqueGasolina <= 0)
             {
                 menu.CentralizaStrings("Fim de Jogo", Program.Altura / 2, ConsoleColor.Red);
-                Thread.Sleep(1000);
+                Thread.Sleep(1500);
                 jogador.inputReader.Abort();
                 CarregaMenu();
             }

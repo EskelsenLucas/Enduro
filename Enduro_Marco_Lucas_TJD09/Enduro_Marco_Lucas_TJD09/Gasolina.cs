@@ -8,31 +8,34 @@ namespace Enduro_Marco_Lucas_TJD09
 {
     class Gasolina
     {
-        string tanqueDeGasolina = "████";
-        private int gasolinaInicial = 12;
-        public int TanqueGasolina = 12;
+        string tanqueDeGasolina = "█████";
+        public int GasolinaInicial = 12;
+        public int TanqueGasolina;
 
         public void DesenhaGasolina()
         {
-            if(TanqueGasolina > gasolinaInicial)
+            if(TanqueGasolina > GasolinaInicial)
             {
-                TanqueGasolina = gasolinaInicial;
+                TanqueGasolina = GasolinaInicial;
             }
             for (int i = 0; i < TanqueGasolina; i++)
             {
-                if(TanqueGasolina > gasolinaInicial /2 + 1)
+                if(TanqueGasolina > GasolinaInicial /2)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                }else if(TanqueGasolina <= gasolinaInicial/2 && TanqueGasolina > 3)
+                }else if(TanqueGasolina <= GasolinaInicial/2 && TanqueGasolina > 3)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
                 }
-                else if(TanqueGasolina <= gasolinaInicial/2-2)
+                else if(TanqueGasolina <= GasolinaInicial/2-2)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                 }
-                Console.SetCursorPosition(Program.Largura - 10, (Program.Altura - 4) - i);
+                int alturaGas = (Program.Altura - 4) - i;
+                Console.SetCursorPosition(Program.Largura - 10, alturaGas);
                 Console.Write(tanqueDeGasolina);
+                Console.SetCursorPosition(Program.Largura - 10, alturaGas-=1);
+                Console.WriteLine(" GAS");
             }
         }
     }
