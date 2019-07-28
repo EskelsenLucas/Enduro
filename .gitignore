@@ -347,3 +347,9 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
+Enduro_Marco_Lucas_TJD09/.vs/Enduro_Marco_Lucas_TJD09/v15/.suo
+Enduro_Marco_Lucas_TJD09/.vs/Enduro_Marco_Lucas_TJD09/v15/.suo
+*.cache
+Enduro_Marco_Lucas_TJD09/.vs/Enduro_Marco_Lucas_TJD09/v15/.suo
+Enduro_Marco_Lucas_TJD09/.vs/Enduro_Marco_Lucas_TJD09/v15/Server/sqlite3/storage.ide-shm
+Enduro_Marco_Lucas_TJD09/Enduro_Marco_Lucas_TJD09/obj/Debug/Enduro_Marco_Lucas_TJD09.csprojAssemblyReference.cache
